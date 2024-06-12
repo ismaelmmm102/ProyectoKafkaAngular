@@ -1,0 +1,35 @@
+package com.api.consumidor;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "usuario")
+public class Usuario {
+
+    @Id
+    private int id;
+    private String nombre;
+    private int edad;
+    
+    public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id=id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+    
+}
