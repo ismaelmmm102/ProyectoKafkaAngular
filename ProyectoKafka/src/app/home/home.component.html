@@ -1,0 +1,92 @@
+<div>
+  <h1>AÑADIR NUEVO USUARIO</h1>
+
+  <form (ngSubmit)="addUser()">
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id" [(ngModel)]="user.id">
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="user.nombre">
+    
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" [(ngModel)]="user.edad"><br>
+
+    <button type="submit">Insertar</button>
+  </form><br>
+
+    <h1>USUARIOS</h1>
+
+    <table border="" id="tabla">
+      <thead>
+        <tr *ngIf="isUserNotEmpty">
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Eliminar</th>
+          <th>Modificar</th>
+        </tr>
+        <tr *ngIf="isUserEmpty">
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.nombre}}</td>
+          <td>{{user.edad}}</td>
+          <td><button (click)="deleteUser(user.id)">Eliminar</button></td>
+          <td><button (click)="selectUser(user); gotoModifyForm()">Modificar</button></td>
+        </tr>
+        <tr *ngIf="isUserEmpty">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <button id= "eliminarTodo" (click)="deleteAllUsers()">Eliminar todos</button><br>
+
+    <h1 *ngIf="showModify">MODIFICAR USUARIO</h1>
+
+    <form *ngIf="showModify" (ngSubmit)="modifyUser()">
+      <label for="modId">ID:</label>
+      <input type="number" id="modId" name="modId" [(ngModel)]="selectedUser.id" readonly>
+  
+      <label for="modNombre">Nombre:</label>
+      <input type="text" id="modNombre" name="modNombre" [(ngModel)]="selectedUser.nombre">
+  
+      <label for="modEdad">Edad:</label>
+      <input type="number" id="modEdad" name="modEdad" [(ngModel)]="selectedUser.edad"><br>
+
+      <button type="submit">Modificar</button>
+    </form><br id="modifyForm">
+
+    <h1>ÚLTIMOS USUARIOS DE KAFKA</h1>
+
+    <table border="" id="tabla">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of lasts">
+          <td>{{user.id}}</td>
+          <td>{{user.nombre}}</td>
+          <td>{{user.edad}}</td>
+        </tr>
+        <tr *ngIf="isLastEmpty">
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br>
+  </div>

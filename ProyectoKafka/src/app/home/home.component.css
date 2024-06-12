@@ -1,0 +1,128 @@
+div {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+}
+
+label {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #4CAF50;
+  border-bottom: 2px solid #ddd;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  margin-left: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#tabla {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  cursor: pointer;
+}
+
+th:hover, button:hover {
+  background-color: #3e8e41;
+}
+
+td {
+  transition: background-color 0.2s;
+}
+
+td:hover {
+  background-color: #f2f2f2;
+}
+
+#tabla tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#tabla tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+#tabla td:nth-child(1), #tabla td:nth-child(3) {
+  width: 15%;
+  text-align: center;
+}
+
+#tabla td:nth-child(2) {
+  width: 70%;
+  text-align: center;
+}
+
+button, button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+
+#eliminarTodo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ff0000;
+  color: #fff;
+}
+
+#eliminarTodo:hover {
+  background-color: #cc0000;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
