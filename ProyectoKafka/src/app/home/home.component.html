@@ -38,7 +38,7 @@
           <td>{{user.nombre}}</td>
           <td>{{user.edad}}</td>
           <td><button (click)="deleteUser(user.id)">Eliminar</button></td>
-          <td><button (click)="selectUser(user); gotoModifyForm()">Modificar</button></td>
+          <td><button (click)="gotoModifyForm();selectUser(user)">Modificar</button></td>
         </tr>
         <tr *ngIf="isUserEmpty">
           <td></td>

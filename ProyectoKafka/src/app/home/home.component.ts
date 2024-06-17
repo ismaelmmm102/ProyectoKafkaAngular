@@ -38,13 +38,13 @@ export class HomeComponent implements OnInit{
     this.consumidorService.deleteAll().subscribe(() => {
       this.users = [];
     });
-    window.location.reload();
+    setTimeout(() => window.location.reload(), 500);
   }
 
   deleteUser(id: number): void{
     this.consumidorService.delete(id).subscribe(() => {
     this.users = this.users.filter(usuario => usuario.id !== id);});
-    window.location.reload();
+    setTimeout(() => window.location.reload(), 500);
   }
 
   get isUserEmpty(): boolean {
@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit{
     this.consumidorService.add(this.user).subscribe(() => {
       this.user = { id:0, nombre: '' , edad:0};
     });
-    window.location.reload();
+    setTimeout(() => window.location.reload(), 500);
   }
 
   selectUser(user: Usuario): void {
@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit{
     this.consumidorService.modify(this.selectedUser.id, this.selectedUser).subscribe(() => {
       this.selectedUser = { id:0, nombre: '' , edad:0};
     });
-    window.location.reload();
+    setTimeout(() => window.location.reload(), 500);
   }
 
   gotoModifyForm(): void {
