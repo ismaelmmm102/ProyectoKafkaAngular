@@ -100,11 +100,14 @@ button, button[type="submit"] {
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  display: block;
 }
 
-button[type="submit"] {
-  display: block;
-  margin: 0 auto;
+
+#cancelar {
+  background-color: #ff0000;
+  margin-top: 10px;
 }
 
 #eliminarTodo {

@@ -81,4 +81,8 @@ export class HomeComponent implements OnInit{
   gotoModifyForm(): void {
     window.location.href = '#modifyForm';
   }
+
+  cancelModify(): void{
+    this.showModify = false;
+  }
 }

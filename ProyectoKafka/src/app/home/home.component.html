@@ -63,7 +63,9 @@
       <input type="number" id="modEdad" name="modEdad" [(ngModel)]="selectedUser.edad"><br>
 
       <button type="submit">Modificar</button>
-    </form><br id="modifyForm">
+      <button id="cancelar"(click)="cancelModify()">Cancelar</button>
+    </form>
+    
 
     <h1>ÚLTIMOS USUARIOS DE KAFKA</h1>
 
