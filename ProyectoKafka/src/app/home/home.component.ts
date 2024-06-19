@@ -85,4 +85,7 @@ export class HomeComponent implements OnInit{
   cancelModify(): void{
     this.showModify = false;
   }
+  refresh(): void{
+    
+  }
 }

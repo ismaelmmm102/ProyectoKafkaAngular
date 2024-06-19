@@ -1,0 +1,6 @@
+projectKey=com.api:crud
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=com.api%3Acrud
+ceTaskId=63429541-7891-4e0c-89a4-f07714c29221
+ceTaskUrl=http://localhost:9000/api/ce/task?id=63429541-7891-4e0c-89a4-f07714c29221

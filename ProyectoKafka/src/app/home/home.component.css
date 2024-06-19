@@ -104,12 +104,13 @@ button, button[type="submit"] {
   display: block;
 }
 
-
 #cancelar {
   background-color: #ff0000;
   margin-top: 10px;
 }
-
+#actualizar {
+  margin-bottom: 10px;
+}
 #eliminarTodo {
   margin-top: 20px;
   margin-bottom: 20px;

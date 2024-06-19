@@ -1,0 +1,6 @@
+projectKey=com.productor-spring:envio
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=com.productor-spring%3Aenvio
+ceTaskId=3c0626bf-69bc-4c7f-b3bd-c801cf0278e0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=3c0626bf-69bc-4c7f-b3bd-c801cf0278e0
