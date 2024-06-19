@@ -86,6 +86,6 @@ export class HomeComponent implements OnInit{
     this.showModify = false;
   }
   refresh(): void{
-    
+    window.location.reload();
   }
 }
